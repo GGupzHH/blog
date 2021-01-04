@@ -1,0 +1,14 @@
+node_modules
+
+docs/images
+docs/pages
+docs/README.md
+
+docs/.vuepress/components
+docs/.vuepress/js
+docs/.vuepress/public
+docs/.vuepress/config.js
+docs/.vuepress/style.styl
+
+package.json
+yarn.lock
