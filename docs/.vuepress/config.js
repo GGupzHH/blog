@@ -10,7 +10,7 @@ module.exports = {
   // 页面标题
   title: 'GGupzHH',
   // 网页描述
-  description: '记录日常所得',
+  description: '绳锯木断，水滴石穿',
   head: [
     // 页面icon
     ['link', { rel: 'icon', href: '/icon.png' }]
