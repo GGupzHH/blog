@@ -1,0 +1,16 @@
+{
+  "name": "ggupzhh",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "serve": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.1",
+    "vuepress": "^1.5.2"
+  }
+}
