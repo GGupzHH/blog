@@ -48,7 +48,8 @@ function sideBarFunc(arr, fn) {
 } 
 
 const document = [
-  { title: 'JavaScript', folder: 'js' }
+  { title: 'JavaScript', folder: 'js' },
+  { title: 'Vue源码剖析', folder: 'vue' }
 ]
 
 const knowledge = [
@@ -60,7 +61,7 @@ const wheel = [
 ]
 
 const documentSideBar = sideBarFunc(document, readDocument)
-const knowledgeSideBar = sideBarFunc(document, readKnowledge)
+const knowledgeSideBar = sideBarFunc(knowledge, readKnowledge)
 const wheelSideBar = sideBarFunc(wheel, readWheel)
 
 module.exports = {

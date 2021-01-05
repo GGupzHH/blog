@@ -1,11 +1,13 @@
 <template>
   <div>
     <NavigationChunk :routerInfo="jsRouterInfo">JavaScript博文</NavigationChunk>
+    <NavigationChunk :routerInfo="vueRouterInfo">Vue源码剖析</NavigationChunk>
   </div>
 </template>
 
 <script>
 const jsContext = require.context( './js/', false, /.md$/)
+const vueContext = require.context( './vue/', false, /.md$/)
   
 function routeInfo(context, folder) {
   const keys = context.keys()
@@ -20,7 +22,8 @@ export default {
   name: "GGupzHHDocument",
   data () {
     return {
-      jsRouterInfo: routeInfo(jsContext, 'js')
+      jsRouterInfo: routeInfo(jsContext, 'js'),
+      vueRouterInfo: routeInfo(vueContext, 'vue')
     }
   }
 }
