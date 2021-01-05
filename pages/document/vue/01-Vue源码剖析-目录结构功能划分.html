@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue源码剖析-目录结构功能划分 | GGupzHH</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/blog/icon.png">
+    <meta name="description" content="绳锯木断，水滴石穿">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.38725633.css" as="style"><link rel="preload" href="/blog/assets/js/app.677cd077.js" as="script"><link rel="preload" href="/blog/assets/js/2.87a49f71.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.014ff51c.js"><link rel="prefetch" href="/blog/assets/js/11.18e679b3.js"><link rel="prefetch" href="/blog/assets/js/12.af13631c.js"><link rel="prefetch" href="/blog/assets/js/13.f0d0b318.js"><link rel="prefetch" href="/blog/assets/js/14.09b13b8a.js"><link rel="prefetch" href="/blog/assets/js/15.8709d1ce.js"><link rel="prefetch" href="/blog/assets/js/16.b66e2f84.js"><link rel="prefetch" href="/blog/assets/js/17.cdb6f3cc.js"><link rel="prefetch" href="/blog/assets/js/18.e4f7b81d.js"><link rel="prefetch" href="/blog/assets/js/19.7d904dda.js"><link rel="prefetch" href="/blog/assets/js/3.09791c22.js"><link rel="prefetch" href="/blog/assets/js/4.3edf5257.js"><link rel="prefetch" href="/blog/assets/js/5.7f5a828c.js"><link rel="prefetch" href="/blog/assets/js/6.fa717ffc.js"><link rel="prefetch" href="/blog/assets/js/7.27e71f78.js"><link rel="prefetch" href="/blog/assets/js/8.8eadef5f.js"><link rel="prefetch" href="/blog/assets/js/9.51d8ccd2.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.38725633.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">GGupzHH</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/pages/knowledge/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/blog/pages/wheel/" class="nav-link">
+  轮子
+</a></div><div class="nav-item"><a href="/blog/pages/document/" class="nav-link router-link-active">
+  博文
+</a></div> <a href="https://github.com/GGupzHH/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/pages/knowledge/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/blog/pages/wheel/" class="nav-link">
+  轮子
+</a></div><div class="nav-item"><a href="/blog/pages/document/" class="nav-link router-link-active">
+  博文
+</a></div> <a href="https://github.com/GGupzHH/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>JavaScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/pages/document/js/博文.html" class="sidebar-link">博文</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue源码剖析</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/pages/document/vue/01-Vue源码剖析-目录结构功能划分.html" class="active sidebar-link">01-Vue源码剖析-目录结构功能划分</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/pages/document/vue/01-Vue源码剖析-目录结构功能划分.html#当前分析只是个人进度-并不代表vue官方" class="sidebar-link">当前分析只是个人进度 并不代表Vue官方</a></li></ul></li><li><a href="/blog/pages/document/vue/01-目录结构功能划分.html" class="sidebar-link">01-目录结构功能划分</a></li><li><a href="/blog/pages/document/vue/02-不同构建版本.html" class="sidebar-link">02-不同构建版本</a></li><li><a href="/blog/pages/document/vue/03-寻找入口.html" class="sidebar-link">03-寻找入口</a></li><li><a href="/blog/pages/document/vue/04-初始化过程.html" class="sidebar-link">04-初始化过程</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue源码剖析-目录结构功能划分"><a href="#vue源码剖析-目录结构功能划分" class="header-anchor">#</a> Vue源码剖析-目录结构功能划分</h1> <h2 id="当前分析只是个人进度-并不代表vue官方"><a href="#当前分析只是个人进度-并不代表vue官方" class="header-anchor">#</a> 当前分析只是个人进度 并不代表Vue官方</h2> <h3 id="vue源码地址"><a href="#vue源码地址" class="header-anchor">#</a> <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener noreferrer">Vue源码地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h3> <h3 id="vue当前目录分析"><a href="#vue当前目录分析" class="header-anchor">#</a> <a href="https://github.com/GGupzHH/vue/tree/dev/src" target="_blank" rel="noopener noreferrer">Vue当前目录分析<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h3> <h3 id="前情提要"><a href="#前情提要" class="header-anchor">#</a> 前情提要</h3> <ul><li><p>源码中使用的  <a href="https://zhenyong.github.io/flowtype/" target="_blank" rel="noopener noreferrer">flow<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 代码类型检查</p></li> <li><p>首先要了解Vue源码目录中各个文件夹的作用</p></li> <li><p>源码目录(当前只分析src目录下的源码)</p> <div class="language-txt line-numbers-mode"><pre class="language-text"><code>  src
+    |- compiler      编译相关 将模板转换成render函数 render创建虚拟DOM `
+    |- core          Vue 核心库`core和平台是无关的 是vue最核心的代码`
+    |- platforms     平台相关代码`和平台相关的代码`
+    |- server        SSR 服务端渲染`SSR服务端渲染相关代码`
+    |- sfc           .vue 文件编译为 .js 文件`Single file component`
+    |- shared        公共的代码`通用函数`
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>compiler</p> <ul><li>编译器</li></ul> <div class="language-txt line-numbers-mode"><pre class="language-text"><code>  将模板转换成render函数 render创建虚拟DOM 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>core</p> <div class="language-txt line-numbers-mode"><pre class="language-text"><code>  core和平台是无关的
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>components<div class="language-txt line-numbers-mode"><pre class="language-text"><code>  keep-alive 组件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li>global-api<div class="language-txt line-numbers-mode"><pre class="language-text"><code>  vue 的静态方法
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li>instance<div class="language-txt line-numbers-mode"><pre class="language-text"><code>  创建vue实例
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li>observer<div class="language-txt line-numbers-mode"><pre class="language-text"><code>  响应式实现机制
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li>util<div class="language-txt line-numbers-mode"><pre class="language-text"><code>  公共成员
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li>vdom<div class="language-txt line-numbers-mode"><pre class="language-text"><code>  虚拟DOM
+  增加了组件的机制
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ul></li> <li><p>platforms</p> <ul><li>平台相关的
+<ul><li>web</li> <li>weex</li></ul></li></ul></li> <li><p>server</p> <ul><li>服务端相关代码</li></ul></li> <li><p>sfc</p> <ul><li>Single file component<div class="language-txt line-numbers-mode"><pre class="language-text"><code>  单文件组件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ul></li> <li><p>shared</p> <ul><li>公共的代码</li></ul></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">1/6/2021, 12:56:12 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/pages/document/js/博文.html" class="prev">
+        博文
+      </a></span> <span class="next"><a href="/blog/pages/document/vue/01-目录结构功能划分.html">
+        01-目录结构功能划分
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.677cd077.js" defer></script><script src="/blog/assets/js/2.87a49f71.js" defer></script>
+  </body>
+</html>
