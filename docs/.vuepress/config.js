@@ -18,7 +18,8 @@ module.exports = {
   // 端口号
   port: 3000,
   extraWatchFiles: [
-    '.vuepress/data/*.js'
+    '.vuepress/data/*.js',
+    'pages'
   ],
   markdown: {
     // 代码块行号
