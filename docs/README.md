@@ -4,7 +4,7 @@ lang: zh-CN
 heroText: GGupzHH
 heroImage: /logo.jpg
 actionText: GET STARTED
-actionLink: /pages/features/
+actionLink: /pages/knowledge/
 features:
 - title: 日常所得
   details: 日常开发和学习的积累。
