@@ -4,7 +4,7 @@ const navBarData = [
     link: '/'
   },
   {
-    text: '知识点',
+    text: 'JavaScript',
     link: '/pages/knowledge/'
   },
   {
