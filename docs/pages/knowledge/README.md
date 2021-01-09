@@ -1,13 +1,11 @@
 <template>
   <div>
-    <NavigationChunk :routerInfo="jsApiRouterInfo">JavaScript-API</NavigationChunk>
-    <NavigationChunk :routerInfo="jsRouterInfo">JavaScript知识点</NavigationChunk>
+    <NavigationChunk :routerInfo="jsRouterInfo">JavaScript</NavigationChunk>
   </div>
 </template>
 
 <script>
 const jsContext = require.context( './js/', false, /.md$/)
-const jsApiContext = require.context( './01-js-api/', false, /.md$/)
   
 function routeInfo(context, folder) {
   const keys = context.keys()
@@ -22,7 +20,6 @@ export default {
   name: "GGupzHHKnowledge",
   data () {
     return {
-      jsApiRouterInfo: routeInfo(jsApiContext, './01-js-api/'),
       jsRouterInfo: routeInfo(jsContext, 'js')
     }
   }

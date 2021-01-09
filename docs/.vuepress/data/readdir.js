@@ -53,8 +53,7 @@ const document = [
 ]
 
 const knowledge = [
-  { title: 'JavaScript', folder: 'js' },
-  { title: 'JavaScript-API', folder: '01-js-api' }
+  { title: 'JavaScript', folder: 'js' }
 ]
 
 const wheel = [
