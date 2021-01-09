@@ -53,7 +53,7 @@ const document = [
 ]
 
 const knowledge = [
-  { title: 'JavaScript', folder: 'js' }
+  { title: 'JavaScript', folder: '01-js-深度剖析' }
 ]
 
 const wheel = [

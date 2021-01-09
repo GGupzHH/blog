@@ -1,11 +1,12 @@
 <template>
   <div>
+    <NavigationChunk :routerInfo="jsRouterInfo">JavaScript 深度剖析</NavigationChunk>
     <NavigationChunk :routerInfo="jsRouterInfo">JavaScript</NavigationChunk>
   </div>
 </template>
 
 <script>
-const jsContext = require.context( './js/', false, /.md$/)
+const jsContext = require.context( './01-js-深度剖析/', false, /.md$/)
   
 function routeInfo(context, folder) {
   const keys = context.keys()
@@ -20,7 +21,7 @@ export default {
   name: "GGupzHHKnowledge",
   data () {
     return {
-      jsRouterInfo: routeInfo(jsContext, 'js')
+      jsRouterInfo: routeInfo(jsContext, '01-js-深度剖析')
     }
   }
 }
