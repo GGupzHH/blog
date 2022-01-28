@@ -11,7 +11,8 @@ function fslist(filePath, folderName) {
     // 是文件还是文件夹
     const stat = fs.statSync(pathJoin)
     if (stat.isFile()) {
-      const fileName = f.split('.')[0]
+
+      const fileName = f.slice(0, f.lastIndexOf('.'))
       return [ `${folderName}/${fileName}`, fileName ]
     } else {
       return fslist(pathJoin)
@@ -53,7 +54,10 @@ const document = [
 ]
 
 const knowledge = [
-  { title: 'JavaScript', folder: '01-js-深度剖析' }
+  { title: 'JavaScript-疑难杂症', folder: '01-js-疑难杂症' },
+  { title: 'JavaScript-数组&对象', folder: '02-js-数组&对象' },
+  { title: 'JavaScript-异步编程', folder: '03-js-异步编程' },
+  { title: 'JavaScript-引擎', folder: '04-js-引擎' },
 ]
 
 const wheel = [
