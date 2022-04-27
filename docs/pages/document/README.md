@@ -12,8 +12,10 @@ const vueContext = require.context( './vue/', false, /.md$/)
 function routeInfo(context, folder) {
   const keys = context.keys()
   return keys.map(filePath => {
+    console.log(filePath)
     const filePathName = filePath.split('/')[1]
-    const fileName = filePathName.slice(0, filePathName.lastIndexOf('.') + 1)
+    const fileName = filePathName.slice(0, filePathName.lastIndexOf('.'))
+    console.log(fileName)
     const path = `./${folder}/${fileName}.html`
     return { path, fileName }
   })
