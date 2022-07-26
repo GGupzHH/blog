@@ -5,7 +5,7 @@ const navBarData = [
   },
   {
     text: '前端面试之道',
-    link: '/pages/knowledge/'
+    link: '/pages/interview/'
   },
   {
     text: '知识就是力量',
@@ -17,7 +17,7 @@ const navBarData = [
   },
   {
     text: 'Vue源码分析',
-    link: '/pages/document/'
+    link: '/pages/analysis/'
     // Vue2 Vue3
   },
   {

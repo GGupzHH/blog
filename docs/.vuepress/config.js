@@ -42,9 +42,12 @@ module.exports = {
     // editLinkText: '编辑此页',
     nav: navBarData,
     sidebar: {
-      '/pages/document/': documentSideBar,
+      // '/pages/interview': 
       '/pages/knowledge/': knowledgeSideBar,
-      '/pages/wheel/': wheelSideBar
+      '/pages/wheel/': wheelSideBar,
+      // 'pages/analysis':
+      '/pages/document/': documentSideBar,
+      // '/pages/': 
     }
   },
   configureWebpack: {
