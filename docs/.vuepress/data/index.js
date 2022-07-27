@@ -1,7 +1,7 @@
 const navBarData = [
   {
     text: 'Home',
-    link: '/'
+    link: '/',
   },
   {
     text: '前端面试之道',
@@ -23,18 +23,9 @@ const navBarData = [
   {
     text: '进阶·博文',
     link: '/pages/document/'
-  },
-  // {
-  //   text: 'GitHub',
-  //   items: [
-  //     {
-  //       text: 'GGupzHH',
-  //       link: 'https://github.com/GGupzHH'
-  //     }
-  //   ]
-  // }
+  }
 ]
 
 module.exports = {
-  navBarData
+  navBarData,
 }

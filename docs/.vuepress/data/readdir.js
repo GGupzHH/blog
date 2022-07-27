@@ -34,10 +34,6 @@ function curry(fn, args) {
   }
 }
 
-const readDocument = curry(fslist)(path.resolve(__dirname, '../../pages/document'))
-const readKnowledge = curry(fslist)(path.resolve(__dirname, '../../pages/knowledge'))
-const readWheel = curry(fslist)(path.resolve(__dirname, '../../pages/wheel'))
-
 function sideBarFunc(arr, fn) {
   return arr.map((item) => {
     return {
@@ -48,11 +44,15 @@ function sideBarFunc(arr, fn) {
   })
 } 
 
-const document = [
-  { title: 'JavaScript', folder: 'js' },
-  { title: 'Vue源码剖析', folder: 'vue' }
+// 前端面试之道
+const readInterview = curry(fslist)(path.resolve(__dirname, '../../pages/interview'))
+const interview = [
+  { title: 'JavaScript基础知识', folder: 'JavaScript基础知识' },
+  { title: 'JavaScript进阶知识', folder: 'JavaScript进阶知识' },
 ]
 
+// 知识就是力量
+const readKnowledge = curry(fslist)(path.resolve(__dirname, '../../pages/knowledge'))
 const knowledge = [
   { title: 'JavaScript-疑难杂症', folder: '01-js-疑难杂症' },
   { title: 'JavaScript-数组&对象', folder: '02-js-数组&对象' },
@@ -60,16 +60,35 @@ const knowledge = [
   { title: 'JavaScript-引擎', folder: '04-js-引擎' },
 ]
 
+// 工具·轮子
+const readWheel = curry(fslist)(path.resolve(__dirname, '../../pages/wheel'))
 const wheel = [
   { title: 'Axios', folder: 'axios' }
 ]
 
-const documentSideBar = sideBarFunc(document, readDocument)
-const knowledgeSideBar = sideBarFunc(knowledge, readKnowledge)
-const wheelSideBar = sideBarFunc(wheel, readWheel)
+// Vue源码分析
+const readAnalysis = curry(fslist)(path.resolve(__dirname, '../../pages/analysis'))
+const analysis = [
+  { title: 'Vue2源码剖析', folder: 'vue2' },
+  { title: 'Vue3源码剖析', folder: 'vue3' }
+]
+
+// 进阶·博文
+const readDocument = curry(fslist)(path.resolve(__dirname, '../../pages/document'))
+const document = [
+  { title: 'JavaScript', folder: 'js' },
+  { title: 'Vue源码剖析', folder: 'vue' }
+]
+
+
+const sideBarData = {
+  '/pages/interview/': sideBarFunc(interview, readInterview),
+  '/pages/knowledge/': sideBarFunc(knowledge, readKnowledge),
+  '/pages/wheel/': sideBarFunc(wheel, readWheel),
+  '/pages/analysis/': sideBarFunc(analysis, readAnalysis),
+  '/pages/document/': sideBarFunc(document, readDocument),
+}
 
 module.exports = {
-  documentSideBar,
-  knowledgeSideBar,
-  wheelSideBar
+  sideBarData
 }
