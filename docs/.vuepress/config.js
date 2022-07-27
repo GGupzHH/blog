@@ -1,5 +1,5 @@
-const { navBarData } = require('./data')
-const { sideBarData } = require('./data/readdir')
+const { navBarData } = require('./data/navBarData')
+const { sideBarData } = require('./data/sideBarData')
 
 module.exports = {
   base: '/blog/',
