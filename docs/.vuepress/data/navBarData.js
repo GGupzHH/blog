@@ -18,7 +18,6 @@ const navBarData = [
   {
     text: 'Vue源码分析',
     link: '/pages/analysis/'
-    // Vue2 Vue3
   },
   {
     text: '进阶·博文',
