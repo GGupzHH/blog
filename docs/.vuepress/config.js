@@ -1,9 +1,5 @@
 const { navBarData } = require('./data')
-const { 
-  documentSideBar,
-  knowledgeSideBar,
-  wheelSideBar
-} = require('./data/readdir')
+const { sideBarData } = require('./data/readdir')
 
 module.exports = {
   base: '/blog/',
@@ -41,11 +37,7 @@ module.exports = {
     // 编辑链接label
     // editLinkText: '编辑此页',
     nav: navBarData,
-    sidebar: {
-      '/pages/document/': documentSideBar,
-      '/pages/knowledge/': knowledgeSideBar,
-      '/pages/wheel/': wheelSideBar
-    }
+    sidebar: sideBarData
   },
   configureWebpack: {
     resolve: {
