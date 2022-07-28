@@ -52,6 +52,15 @@ const sideBarFilter = sideBarConfig => {
   return sideBarData
 }
 
+const setPageMenuMapping = sideBarConfig => {
+  const pagesMenuMapping = {}
+  sideBarConfig.forEach(sideBarItem => {
+    pagesMenuMapping[sideBarItem.curryUri.split('/').pop()] = sideBarItem.sideBarInfo
+  })
+  return pagesMenuMapping
+}
+
 module.exports = {
-  sideBarFilter
+  sideBarFilter,
+  setPageMenuMapping
 }
