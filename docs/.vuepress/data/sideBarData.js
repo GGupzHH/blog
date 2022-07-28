@@ -1,5 +1,11 @@
-const { sideBarFilter } = require('./utils')
+const { sideBarFilter, setPageMenuMapping } = require('./utils')
 
+/**
+ * curryUri 需要导入的文件路径
+ * sideBarInfo 
+ *   title 二级标题名称，需要和pages下面的文件名一致
+ *   folder 二级标题对应的文件名称
+ */
 const sideBarConfig = [
   // 前端面试之道
   {
