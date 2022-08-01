@@ -1,5 +1,6 @@
 const { navBarData } = require('./data/navBarData')
-const { sideBarData } = require('./data/sideBarData')
+const { sideBarConfig } = require('./data/sideBarData')
+const { sideBarFilter } = require('./data/utils')
 
 module.exports = {
   base: '/blog/',
@@ -37,7 +38,7 @@ module.exports = {
     // 编辑链接label
     // editLinkText: '编辑此页',
     nav: navBarData,
-    sidebar: sideBarData
+    sidebar: sideBarFilter(sideBarConfig)
   },
   configureWebpack: {
     resolve: {
