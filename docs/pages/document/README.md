@@ -1,21 +1,25 @@
 <template>
   <div>
-    <NavigationChunk :routerInfo="jsRouterInfo">JavaScript博文</NavigationChunk>
-    <NavigationChunk :routerInfo="vueRouterInfo">Vue源码剖析</NavigationChunk>
+    <NavigationChunk 
+      v-for="(knowledgeItem, knowledgeIndex) in knowledge" 
+      :key="knowledgeIndex" 
+      :routerInfo="InitRouter(knowledgeItem.router, knowledgeItem.folder)"
+    >
+      {{ knowledgeItem.title }}
+    </NavigationChunk>
   </div>
 </template>
 
 <script>
 import { InitRouter } from '../../utils/pagesInitRouter.js'
-const jsContext = require.context( './js/', false, /.md$/)
-const vueContext = require.context( './vue/', false, /.md$/)
-  
+const { sideBarConfig } = require('../../.vuepress/data/sideBarData.js')
+
 export default {
-  name: "GGupzHHDocument",
+  name: "GGupzHHKnowledge",
   data () {
     return {
-      jsRouterInfo: InitRouter(jsContext, 'js'),
-      vueRouterInfo: InitRouter(vueContext, 'vue')
+      knowledge: sideBarConfig[4].sideBarInfo,
+      InitRouter
     }
   }
 }

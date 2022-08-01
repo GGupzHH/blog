@@ -1,19 +1,25 @@
 <template>
   <div>
-    <NavigationChunk :routerInfo="AxiosRouterInfo">Axios配置</NavigationChunk>
+    <NavigationChunk 
+      v-for="(knowledgeItem, knowledgeIndex) in knowledge" 
+      :key="knowledgeIndex" 
+      :routerInfo="InitRouter(knowledgeItem.router, knowledgeItem.folder)"
+    >
+      {{ knowledgeItem.title }}
+    </NavigationChunk>
   </div>
 </template>
 
 <script>
 import { InitRouter } from '../../utils/pagesInitRouter.js'
-
-const AxiosContext = require.context( './axios/', false, /.md$/)
+const { sideBarConfig } = require('../../.vuepress/data/sideBarData.js')
 
 export default {
-  name: "GGupzHHWheel",
+  name: "GGupzHHKnowledge",
   data () {
     return {
-      AxiosRouterInfo: InitRouter(AxiosContext, 'Axios')
+      knowledge: sideBarConfig[2].sideBarInfo,
+      InitRouter
     }
   }
 }
