@@ -1,11 +1,11 @@
 <template>
   <div>
     <NavigationChunk 
-      v-for="(knowledgeItem, knowledgeIndex) in knowledge" 
-      :key="knowledgeIndex" 
-      :routerInfo="InitRouter(knowledgeItem.router, knowledgeItem.folder)"
+      v-for="(wheelItem, wheelIndex) in wheel" 
+      :key="wheelIndex" 
+      :routerInfo="InitRouter(fileChildList, wheelItem.folder)"
     >
-      {{ knowledgeItem.title }}
+      {{ wheelItem.title }}
     </NavigationChunk>
   </div>
 </template>
@@ -13,13 +13,15 @@
 <script>
 import { InitRouter } from '../../utils/pagesInitRouter.js'
 const { sideBarConfig } = require('../../.vuepress/data/sideBarData.js')
+const fileChildList = require.context('../../pages/wheel', true, /.md$/)
 
 export default {
-  name: "GGupzHHKnowledge",
+  name: "Wheel",
   data () {
     return {
-      knowledge: sideBarConfig[2].sideBarInfo,
-      InitRouter
+      wheel: sideBarConfig[2].sideBarInfo,
+      InitRouter,
+      fileChildList
     }
   }
 }

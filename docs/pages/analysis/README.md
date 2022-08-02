@@ -1,28 +1,27 @@
 <template>
   <div>
     <NavigationChunk 
-      v-for="(knowledgeItem, knowledgeIndex) in knowledge" 
-      :key="knowledgeIndex" 
-      :routerInfo="InitRouter(routerMapping, knowledgeItem.folder)"
+      v-for="(analysisItem, analysisIndex) in analysis" 
+      :key="analysisIndex" 
+      :routerInfo="InitRouter(fileChildList, analysisItem.folder)"
     >
-      {{ knowledgeItem.title }}
+      {{ analysisItem.title }}
     </NavigationChunk>
   </div>
 </template>
 
 <script>
-import { InitRouter, setRouterFileMapping } from '../../utils/pagesInitRouter.js'
-const { curryUri, sideBarConfig } = require('../../.vuepress/data/sideBarData.js')
-const fileChileList = require.context('../../pages/analysis', true, /.md$/)
+import { InitRouter } from '../../utils/pagesInitRouter.js'
+const { sideBarConfig } = require('../../.vuepress/data/sideBarData.js')
+const fileChildList = require.context('../../pages/analysis', true, /.md$/)
 
 export default {
-  name: "GGupzHHKnowledge",
+  name: "Analysis",
   data () {
     return {
-      fileChileList,
-      knowledge: sideBarConfig[3].sideBarInfo,
+      analysis: sideBarConfig[3].sideBarInfo,
       InitRouter,
-      routerMapping: setRouterFileMapping(fileChileList)
+      fileChildList
     }
   }
 }
