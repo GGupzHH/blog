@@ -3,7 +3,7 @@
     <NavigationChunk 
       v-for="(knowledgeItem, knowledgeIndex) in knowledge" 
       :key="knowledgeIndex" 
-      :routerInfo="InitRouter(knowledgeItem.router, knowledgeItem.folder)"
+      :routerInfo="InitRouter(fileChildList, knowledgeItem.folder)"
     >
       {{ knowledgeItem.title }}
     </NavigationChunk>
@@ -13,13 +13,15 @@
 <script>
 import { InitRouter } from '../../utils/pagesInitRouter.js'
 const { sideBarConfig } = require('../../.vuepress/data/sideBarData.js')
+const fileChildList = require.context('../../pages/knowledge', true, /.md$/)
 
 export default {
-  name: "GGupzHHKnowledge",
+  name: "Knowledge",
   data () {
     return {
       knowledge: sideBarConfig[1].sideBarInfo,
-      InitRouter
+      InitRouter,
+      fileChildList
     }
   }
 }
