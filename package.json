@@ -1,6 +1,6 @@
 {
   "name": "ggupzhh",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docs:dev": "vuepress dev docs",
