@@ -70,8 +70,28 @@ const sideBarConfig = [
     curryUri: '/pages/document',
     sideBarInfo: [
       {
-        title: 'JavaScript',
+        title: 'HTML相关篇',
+        folder: 'html',
+      },
+      {
+        title: 'Css相关篇',
+        folder: 'css',
+      },
+      {
+        title: 'JavaScript相关篇',
         folder: 'js',
+      },
+      {
+        title: 'TypeScript相关篇',
+        folder: 'ts',
+      },
+      {
+        title: '数据结构篇',
+        folder: 'structure',
+      },
+      {
+        title: '算法篇',
+        folder: 'algorithm',
       },
       {
         title: 'Vue源码剖析',
