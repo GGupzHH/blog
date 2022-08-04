@@ -32,7 +32,7 @@ module.exports = {
     lastUpdated: '最后更新时间', // 最后更新时间
     sidebar: 'auto', // 所有页面自动生成侧边栏
     repo: 'https://github.com/GGupzHH/blog', // 仓库地址
-    repoLabel: 'Github',  // 仓库链接label
+    repoLabel: 'GitHub',  // 仓库链接label
     // 编辑链接
     // editLinks: true,
     // 编辑链接label
