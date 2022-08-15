@@ -39,6 +39,18 @@ const sideBarConfig = [
         title: 'JavaScript-引擎', 
         folder: '04-js-引擎',
       },
+      {
+        title: 'Git篇',
+        folder: 'git' ,
+      },
+      {
+        title: 'Node篇',
+        folder: 'node' ,
+      },
+      {
+        title: 'Dart&Flutter篇',
+        folder: 'dart' ,
+      }
     ]
   },
   // 工具·轮子
@@ -96,6 +108,10 @@ const sideBarConfig = [
       {
         title: 'Vue源码剖析',
         folder: 'vue' ,
+      },
+      {
+        title: '控制台篇',
+        folder: 'console' ,
       }
     ]
   }
