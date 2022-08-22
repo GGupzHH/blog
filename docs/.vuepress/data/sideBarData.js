@@ -112,7 +112,15 @@ const sideBarConfig = [
       {
         title: '控制台篇',
         folder: 'console' ,
-      }
+      },
+      {
+        title: 'Python篇',
+        folder: 'python',
+      },
+      {
+        title: '网络篇',
+        folder: 'network',
+      },
     ]
   }
 ]
