@@ -37,7 +37,7 @@ jobs:
           echo ${remote_addr}
           echo ${commit_info}
           echo ${deploy_branch}
-          
+
           yarn
           yarn build
           cd docs/.vuepress/dist
@@ -54,5 +54,6 @@ jobs:
           git commit -m "auto deploy, $commit_info"
           remote_addr=`echo $remote_addr | awk -F'://' '{print $2}'`
           remote_addr=https://${user_name}:${{secrets.BLOG_TOKEN}}@${remote_addr}
+          echo ${remote_addr}
           git remote add origin ${remote_addr}
           git push origin HEAD:$deploy_branch --force # 推送到github $deploy_branch分支
