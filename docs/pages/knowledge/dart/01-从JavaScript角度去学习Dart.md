@@ -1,4 +1,5 @@
 # Dart 和 Flutter 
+
 ### Dart是静态脚本语言
 
 ### Dart 基本数据类型
@@ -42,7 +43,7 @@
         ```
 
     - **object**
-      - object 可以进行任何赋值，没有约束，但是在编译的时候会做一些判断，并且报错。如果数据来自接口层就会很容易导致运行时报错，所以要减少使用。
+      - object 可以进行任何赋值，没有约束，但是在编译的时候会做一些判断并且给出报错。如果数据来自接口层就会很容易导致运行时报错，所以要减少使用。
 
     - **dynamic**
       - dynamic 也是`动态`的数据类型，但是数据类型调用异常，则只是会在运行时报错，很`危险`，所以要慎重。
@@ -134,8 +135,89 @@
     - 默认情况都是public，如果需要设置为私有属性，则需要在方法或者属性前使用`"_"`。
 
   - **抽象类和泛型类**
+    - `抽象类`: 主要是实现一个类被其他子类继承，抽象类无法实例化。
+      ```Dart
+        abstract class Actions {
+          run();
+          jump();
+        }
+
+        class Dog extends Actions {
+          run() {
+            print('这只狗在跑');
+          }
+
+          jump() {
+            print('这只狗在跳');
+          }
+        }
+
+        class Cat extends Actions {
+          run() {
+            print('这只猫在跑');
+          }
+
+          jump() {
+            print('这只猫在跳');
+          }
+        }
+
+        void main() {
+          Dog dog = new Dog();
+          Cat cat = new Cat();
+          dog.run();
+          cat.jump();
+        }
+      ```
+    - `泛型类`: 定义类型
+      ```Dart
+        class Array<T> {
+          List _list = new List<T>();
+          Array();
+          void add<T>(T value) {
+            this._list.add(value);
+          }
+
+          get value{
+            return this._list;
+          }
+        }
+
+        void main(List<String> args) {
+          Array arr = new Array<String>();
+          arr.add('aa');
+          arr.add('bb');
+          print(arr.value);
+
+          Array arr2 = new Array<int>();
+          arr2.add(1);
+          arr2.add(2);
+          print(arr2.value);
+        }
+      ```
+
 *************
 ### Dart 库与调用
   - **Dart库管理**
-  - **开发Dart**
+    - Dart一样有自己的包管理工具`pub.dev`。
+    - 配置文件 `pubspec.yaml` 中增加该库即可。
+    - 和在 JavaScript 的 package.json 中增加声明一样，同样也有 dependencies 和 dev_dependencies。
+    ```dev
+      dependencies:
+        cupertino_icons: ^1.0.2
+      dev_dependencies:
+        flutter_test:
+          sdk: flutter
+    ```
+
   - **Dart调用库**
+    - 引入使用`import`。
+    - 引入 pages 下的 header.dart 模块。
+    - `import` 为关键词。
+    - `package` 为协议，可以使用 http 的方式，不过最好使用本地 package 方式，避免性能受影响。
+    - `project_names` 为库名或者说是该项目名。
+    - `第三方模块`则必须使用 package 的引入方式。
+      ```dev
+        // 当然这里也可以使用相对路径的方式，不过建议使用 package 的方式，以保持整个项目代码的一致性
+        import 'package:project_names/pages/header.dart';
+      ```
