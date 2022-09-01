@@ -134,6 +134,67 @@
     - 默认情况都是public，如果需要设置为私有属性，则需要在方法或者属性前使用`"_"`。
 
   - **抽象类和泛型类**
+    - `抽象类`: 主要是实现一个类被其他子类继承，抽象类无法实例化。
+      ```Dart
+        abstract class Actions {
+          run();
+          jump();
+        }
+
+        class Dog extends Actions {
+          run() {
+            print('这只狗在跑');
+          }
+
+          jump() {
+            print('这只狗在跳');
+          }
+        }
+
+        class Cat extends Actions {
+          run() {
+            print('这只猫在跑');
+          }
+
+          jump() {
+            print('这只猫在跳');
+          }
+        }
+
+        void main() {
+          Dog dog = new Dog();
+          Cat cat = new Cat();
+          dog.run();
+          cat.jump();
+        }
+      ```
+    - `泛型类`: 定义类型
+      ```Dart
+        class Array<T> {
+          List _list = new List<T>();
+          Array();
+          void add<T>(T value) {
+            this._list.add(value);
+          }
+
+          get value{
+            return this._list;
+          }
+        }
+
+        void main(List<String> args) {
+          Array arr = new Array<String>();
+          arr.add('aa');
+          arr.add('bb');
+          print(arr.value);
+
+          Array arr2 = new Array<int>();
+          arr2.add(1);
+          arr2.add(2);
+          print(arr2.value);
+        }
+      ```
+
 *************
 ### Dart 库与调用
   - **Dart库管理**
