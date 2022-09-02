@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.9.7",
+    "@vuepress/plugin-nprogress": "^1.9.7",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.3.1",
     "vuepress": "^1.9.7"
