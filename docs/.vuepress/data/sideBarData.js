@@ -110,16 +110,20 @@ const sideBarConfig = [
         folder: 'vue' ,
       },
       {
-        title: '控制台篇',
-        folder: 'console' ,
-      },
-      {
         title: 'Python篇',
         folder: 'python',
       },
       {
         title: '网络篇',
         folder: 'network',
+      },
+      {
+        title: '控制台篇',
+        folder: 'console' ,
+      },
+      {
+        title: '服务器篇',
+        folder: 'server' ,
       },
     ]
   }
