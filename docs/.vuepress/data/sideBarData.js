@@ -50,6 +50,10 @@ const sideBarConfig = [
       {
         title: 'Dart&Flutter篇',
         folder: 'dart' ,
+      },
+      {
+        title: 'Nest篇',
+        folder: 'nest' ,
       }
     ]
   },
