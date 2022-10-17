@@ -129,6 +129,10 @@ const sideBarConfig = [
         title: '服务器篇',
         folder: 'server' ,
       },
+      {
+        title: '接口相关篇',
+        folder: 'api' ,
+      },
     ]
   }
 ]
