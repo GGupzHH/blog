@@ -1,4 +1,4 @@
-# Providers
+# Nest-Providers 提供者
 
 ### 基本用法
   - 很多基本的类都能被看做`provider`，都可以通过constructor注入依赖关系。
