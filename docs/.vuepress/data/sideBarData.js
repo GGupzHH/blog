@@ -48,13 +48,17 @@ const sideBarConfig = [
         folder: 'node' ,
       },
       {
-        title: 'Dart&Flutter篇',
+        title: 'Nest篇',
+        folder: 'nest' ,
+      },
+      {
+        title: 'Dart篇',
         folder: 'dart' ,
       },
       {
-        title: 'Nest篇',
-        folder: 'nest' ,
-      }
+        title: 'Flutter篇',
+        folder: 'flutter' ,
+      },
     ]
   },
   // 工具·轮子
