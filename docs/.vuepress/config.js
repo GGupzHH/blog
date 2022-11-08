@@ -45,7 +45,6 @@ module.exports = {
     resolve: {
       // 静态资源的别名
       alias: {
-        '@vuepress-img': '/public/images',
       }
     }
   }
