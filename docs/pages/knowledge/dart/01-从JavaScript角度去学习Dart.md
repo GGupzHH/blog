@@ -1,6 +1,20 @@
-# Dart 和 Flutter 
+# Dart
 
-### Dart是静态脚本语言
+:::tip
+Dart是静态脚本语言
+:::
+### Dart 相关链接
+  - [官网](https://dart.cn/guides/language/language-tour)
+
+### Dart 创建项目
+  - 创建项目
+    ```sh
+      dart create dart_learn
+    ```
+  - 运行
+    ```sh
+      dart run
+    ```
 
 ### Dart 基本数据类型
   - **Null**
