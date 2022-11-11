@@ -181,6 +181,52 @@
     ```
 
 ### 日期、时间
+  - 声明
+    - 获取当前时间
+      ```dart
+      var now = DateTime.now();
+      print(now);
+      ```
+
+    - 获取指定时间
+      ```dart
+      var d = DateTime(1996, 1, 1);
+      print(d);
+      ```
+  
+  - 时间增减量
+    ```dart
+    var d = DateTime(1996, 1, 1);
+
+    print(d.add(Duration(days: 1)));
+    print(d.add(Duration(days: -1)));
+    ```
+
+  - 时间比较
+    ```dart
+    var d1 = DateTime(2022, 11, 3);
+    var d2 = DateTime(2022, 11, 2);
+    // d1是否在d2之后
+    print(d1.isAfter(d2));
+    // d1是否在d2之前
+    print(d1.isBefore(d2));
+    ```
+
+  - 时间差
+    ```dart
+    var d1 = DateTime(2022, 1, 1);
+    var d2 = DateTime(2022, 1, 2);
+    var difference = d1.difference(d2);
+    print([difference.inDays, difference.inHours, difference.inMicroseconds]);
+    ```
+
+  - 时间戳
+    ```dart
+    var now = DateTime.now();
+    print(now.millisecondsSinceEpoch);
+    print(now.microsecondsSinceEpoch);
+    ```
+
 
 ### 列表
 
