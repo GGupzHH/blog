@@ -463,6 +463,38 @@
     ```
 
 ### 枚举
+  - :::tip 使用场景
+    一般在常量定义中使用，类型比较方便
+    :::
+  - ```dart
+    enum ColorType {
+      none,
+      java,
+      js,
+      python,
+      dart,
+    }
+
+    void main(List<String> args) {
+      // 1 接收输入值 red 字符串
+      var color = ColorType.java;
+
+      // 3 switch 判断，打印输出
+      switch (color) {
+        case ColorType.java:
+          print('java');
+          break;
+        case ColorType.js:
+          print('js');
+          break;
+        case ColorType.python:
+          print('python');
+          break;
+        default:
+          print('其他');
+      }
+    }
+    ```
 
 ### 注释
 
