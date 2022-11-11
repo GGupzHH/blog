@@ -344,7 +344,57 @@
 
 
 ### Map
+  - 声明
+    - 任意
+      ```dart
+      var a = {'name': '张三', 'age': 12};
+      ```
 
+    - 强类型
+      ```dart
+      var b = <String, int>{};
+      ```
+
+  - 方法
+    - 新增单个属性
+      ```dart
+      var b = <String, int>{};
+      b['第一天'] = 123;
+      b['第二天'] = 456;
+      b.addAll({'第三天': 789});
+      ```
+
+    - 新增整个Map
+      ```dart
+      var c = {'第四天': 110};
+      b.addEntries(c.entries);
+      ```
+
+    - 检查是否存在Key
+      ```dart
+      print(b.containsKey('第四天'));
+      ```
+
+    - 检查是否存在Value
+      ```dart
+      print(b.containsValue(110));
+      ```
+
+    - 更新
+      ```dart
+      b.update('第一天', (value) => value + 120);
+      ```
+
+    - 删除
+      ```dart
+      b.remove('第四天');
+      ```
+
+    - 清空
+      ```dart
+      b.clear();
+      ```
+      
 ### Set
 
 ### 枚举
