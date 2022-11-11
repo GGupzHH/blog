@@ -366,36 +366,101 @@
 
     - 新增整个Map
       ```dart
+      var b = <String, int>{};
       var c = {'第四天': 110};
       b.addEntries(c.entries);
       ```
 
     - 检查是否存在Key
       ```dart
+      var b = <String, int>{};
       print(b.containsKey('第四天'));
       ```
 
     - 检查是否存在Value
       ```dart
+      var b = <String, int>{};
       print(b.containsValue(110));
       ```
 
     - 更新
       ```dart
+      var b = <String, int>{};
       b.update('第一天', (value) => value + 120);
       ```
 
     - 删除
       ```dart
+      var b = <String, int>{};
       b.remove('第四天');
       ```
 
     - 清空
       ```dart
+      var b = <String, int>{};
       b.clear();
       ```
       
 ### Set
+  - 声明
+    - 任意
+      ```dart
+      var a = Set();
+      var a = <dynamic>{};
+      ```
+
+    - 强类型
+      ```dart
+      var b = Set<num>();
+      var b = <num>{};
+      ```
+
+  - 输出列表
+    ```dart
+    var l = [1, 2, 3, 4, 1, 2, 3, 4];
+    var s = <num>{};
+    s.addAll(l);  // {1, 2, 3, 4}
+    s.toList(); // [1, 2, 3, 4]
+    ```
+
+  - 方法
+    - 添加
+    ```dart
+    a.add('value');
+    b.addAll([1, 2, 3]);
+    ```
+
+    - 查询
+    ```dart
+    print(b.contains(2));
+    ```
+
+    - 交集
+    ```dart
+    var b = <num>{1, 2, 3};
+    var c = <num>{1, 3, 5};
+    print(b.intersection(c)); // {1, 3}
+    ```
+
+    - 联合
+    ```dart
+    var c = <num>{1, 2, 3};
+    var d = <num>{11, 32, 53};
+    var e = <num>{100};
+    print(c..union(d)..union(e)); // {1, 2, 3, 11, 32, 53, 100}
+    ```
+
+    - 删除
+    ```dart
+    var d = <num>{11, 32, 53};
+    d.remove(11);
+    ```
+
+    - 清空
+    ```dart
+    var d = <num>{11, 32, 53};
+    d.clear();
+    ```
 
 ### 枚举
 
