@@ -229,6 +229,119 @@
 
 
 ### 列表
+  - 声明
+    - 自动
+      ```dart
+      var a = [1, 2, 3];
+      print(a);
+
+      List<String> b = [];
+      b
+        ..add('123')
+        ..add('234');
+      print(b);
+      ```
+
+    - 指定长度
+      ```dart
+      var c = List<num>.filled(3, 0);
+      c[2] = 2;
+      print(c);
+      ```
+
+    - 迭代器生成数据
+      ```dart
+      var d = List<String>.generate(10, (index) => ('张三$index'));
+      print(d);
+      ```
+  
+  - 方法
+    - 添加
+      ```dart
+      var a = [1, 2, 3];
+      a
+        ..add(1)
+        ..addAll([1, 2, 3]);
+      ```
+      
+    - 插入
+      ```dart
+      var a = [1, 2, 3];
+      a
+        ..insert(0, 100)
+        ..insertAll(1, [200, 200]);
+      ```
+
+    - 查询
+      ```dart
+      var a = [1, 2, 3];
+      print(a.indexOf(2));
+      print(a.indexOf(5));
+      ```
+
+    - 按条件查询
+      ```dart
+      var a = [1, 2, 3];
+      print(a.indexWhere((item) => item == 2));
+      ```
+
+    - 删除
+      ```dart
+      var a = [1, 2, 3, 4, 5];
+      print(a); // [1, 2, 3, 4, 5]
+
+      a.remove(1);
+      print(a); // [2, 3, 4, 5]
+
+      a.removeAt(1);
+      print(a); // [2, 4, 5]
+
+      a.removeRange(0, 1);
+      print(a); // [4, 5]
+
+      a.removeWhere((element) => element == 5);
+      print(a); // [4]
+      ```
+
+    - 洗牌
+      ```dart
+      var a = [1, 2, 3, 4, 5];
+      print(a); // [1, 2, 3, 4, 5]
+      a.shuffle();
+      print(a); // [5, 3, 2, 1, 4]
+      ```
+
+    - 填充
+      ```dart
+      var a = [1, 2, 3, 4, 5];
+      a.fillRange(0, 2, 100);
+      print(a); // [100, 100, 3, 4, 5]
+      ```
+
+    - 排序
+      ```dart
+      var a = [1, 2, 3, 4, 5, 2];
+      a.sort();
+      print(a); // [1, 2, 2, 3, 4, 5]
+      ```
+
+    - 合并
+      :::tip
+      必须是相同类型数据合并。
+      :::
+      ```dart
+      var a = [1, 2, 3, 4, 5, 2];
+      var b = [123];
+      print(a + b); // [1, 2, 3, 4, 5, 2, 123]
+      ```
+
+    - 复制
+      ```dart
+      var a = [1, 2, 3, 4, 5, 2];
+      var b = a.sublist(0, 3);
+      print([a, b]);
+      ```
+
 
 ### Map
 
