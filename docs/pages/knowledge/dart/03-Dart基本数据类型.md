@@ -137,3 +137,61 @@
       // 打印结果
       // true b是空的 c不是空的 false
       ```
+
+### 字符串
+  - 声明
+     ```dart
+    String a = 'a';
+    String b = "b";
+    ```
+
+  - 字符串模板
+    ```dart
+    var a = 'abc';
+    String b = 'ducafecat : ${a}';
+    print(b);
+    ```
+
+  - 字符串链接
+    ```dart
+    var a = 'hello'
+    ' '
+    'ducafecat';
+
+    var a = '''
+    hello word
+    dart
+    ''';
+    print(a);
+    ```
+  
+  - 取消转义
+    ```dart
+    var a = r'hello word \n dart';
+    print(a);
+    ```
+  
+  - 字符串创建
+    ```dart
+    var sbuffer = StringBuffer();
+    sbuffer..write('hello word!')
+    ..writeAll(['', 'dart']);
+    print(sbuffer);
+    print(sbuffer.toString());
+    ```
+
+### 日期、时间
+
+### 列表
+
+### Map
+
+### Set
+
+### 枚举
+
+### 注释
+
+### 函数
+
+### 操作符
