@@ -2,6 +2,9 @@
 
 ### 错误的两种类型
   - Exception 类
+    :::tip
+    一般用在可以捕获的情况下，可以安全处理。
+    :::
     | 名称 | 说明 |
     | ----- | ----- |
     | DeferredLoadException |	延迟加载错误 |
@@ -12,6 +15,9 @@
     | TimeoutException | 超时错误 |
 
   - Error 类
+    :::tip
+    一般用在不可恢复，容易崩溃的情况。
+    :::
     | 名称 | 说明 |
     | ---- | ---- |
     | AbstractClassInstantiationError |	抽象类实例化错误 |
