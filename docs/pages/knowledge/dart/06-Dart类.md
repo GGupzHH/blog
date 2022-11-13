@@ -83,3 +83,13 @@
     car.color = '123';
     print(car.info);
     ```
+
+### 静态
+  - ```dart
+    class Car {
+      static String carName = 'mustang';
+      static void getCarName() => {print('car is name: $carName')};
+    }
+    print(Car.carName);
+    Car.getCarName();
+    ```
