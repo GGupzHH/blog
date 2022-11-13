@@ -64,3 +64,22 @@
     car.cell(222123);
 
     ```
+
+### set 和 get
+:::tip
+实际的业务场景就是可以在获取值的同时，去加工当前类的属性。
+:::
+  - ```dart
+    class Car {
+      String? _color;
+
+      Car();
+
+      set color(String val) => _color = val;
+
+      String get info => 'Car is $_color';
+    }
+    final car = Car();
+    car.color = '123';
+    print(car.info);
+    ```
