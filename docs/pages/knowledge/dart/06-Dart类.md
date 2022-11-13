@@ -93,3 +93,64 @@
     print(Car.carName);
     Car.getCarName();
     ```
+
+### abstract 类、继承、类型
+  - abstract 类
+    :::tip
+    abstract类无法实例化
+    :::
+    ```dart
+    abstract class Car {
+      String carName = '';
+      void getCarName();
+    }
+    ```
+
+  - 继承
+    ```dart
+    abstract class Car {
+      String carName = '';
+      void getCarName();
+    }
+
+    class Ferrari extends Car {
+      @override
+      String carName;
+
+      Ferrari(this.carName);
+
+      @override
+      void getCarName() {
+        print('car name is $carName');
+      }
+    }
+
+    
+    final ferrari = Ferrari('法拉利');
+    print(ferrari.carName);
+    ferrari.getCarName();
+    ```
+
+  - 类型
+    ```dart
+    abstract class Car {
+      String carName = '';
+      void getCarName();
+    }
+
+    class Mustang implements Car {
+      @override
+      String carName;
+
+      Mustang(this.carName);
+
+      @override
+      void getCarName() {
+        print('car name is $carName');
+      }
+    }
+    
+    final mustang = Mustang('野马');
+    print(mustang.carName);
+    mustang.getCarName();
+    ```
