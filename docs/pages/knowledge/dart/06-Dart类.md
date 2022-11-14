@@ -221,6 +221,94 @@
     m.getName();
     ```
 
+  - 工厂
+    - 调用子类
+      ```dart
+      abstract class Car {
+        void call();
+        factory Car(String type) {
+          switch (type) {
+            case "ferrari":
+              return Ferrari();
+            case "mustang":
+              return Mustang();
+            default:
+              throw "The '$type' is not an animal";
+          }
+        }
+      }
+
+      class Ferrari implements Car {
+        @override
+        void call() {
+          print('ferrari Calling...');
+        }
+      }
+
+      class Mustang implements Car {
+        @override
+        void call() {
+          print('mustang Calling...');
+        }
+      }
+
+      void main() {
+        var ferrari = Car('ferrari');
+        var mustang = Car('mustang');
+
+        ferrari.call();
+        mustang.call();
+      }
+      ```
+
+    - 单例模式
+      ```dart
+      class Car {
+        static final Car _carName = Car._internal();
+
+        Car._internal();
+
+        factory Car() {
+          // carName = name;
+          return _carName;
+        }
+
+        void getCarName() {
+          print('car $_carName');
+        }
+      }
+
+      var ferrari = Car();
+      var mustang = Car();
+
+      print(identical(ferrari, mustang));
+
+      Car().getCarName();
+      Car().getCarName();
+      ```
+
+    - 减少重复实例对象
+      ```dart
+      class Car {
+        String carName;
+        Car(this.carName);
+
+        factory Car.handleName(String name) => Car(name);
+
+        void getCarName() {
+          print('car $carName');
+        }
+      }
+
+      void main() {
+        var ferrari = Car('ferrari');
+        var mustang = Car('mustang');
+
+        ferrari.getCarName();
+        mustang.getCarName();
+      }
+      ```
+
 ### 类型
   - 类型
     ```dart
