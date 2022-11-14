@@ -94,7 +94,7 @@
     Car.getCarName();
     ```
 
-### abstract 类、继承、类型
+### abstract 类
   - abstract 类
     :::tip
     abstract类无法实例化
@@ -106,6 +106,7 @@
     }
     ```
 
+### 继承
   - 继承
     ```dart
     abstract class Car {
@@ -130,7 +131,97 @@
     print(ferrari.carName);
     ferrari.getCarName();
     ```
+  
+  - 父类调用
+    ```dart
+    class Car {
+      String carName;
+      Car(this.carName);
 
+      void getCarName() {
+        print('this is $carName');
+      }
+    }
+
+    class Ferrari extends Car {
+      Ferrari(super.carName);
+
+      @override
+      void getCarName() {
+        super.getCarName();
+        print('重写父类');
+      }
+    }
+    final f = Ferrari('法拉利');
+    print(f.carName);
+    f.getCarName();
+    ```
+  
+  - 调用父类构造
+    ```dart
+    class Car {
+      String carName;
+      Car(this.carName);
+
+      void getCarName() {
+        print('this is $carName');
+      }
+    }
+
+    class Mustang extends Car {
+      Mustang(String carName) : super(carName);
+    }
+
+    final m = Mustang('野马');
+    print(m.carName);
+    m.getCarName();
+    ```
+
+  - 多继承
+    ```dart
+    mixin Plane {
+      void getCarName() {
+        print('this is Plane');
+      }
+    }
+
+    // 限定依赖
+    mixin Car on Plane{
+      void getName() {
+        print('this is Car');
+      }
+
+      @override
+      void getCarName() {
+        print('this is Car');
+      }
+    }
+
+    mixin Train {
+      void getName() {
+        print('this is Train');
+      }
+
+      void getTrainName() {
+        print('this is Train');
+      }
+    }
+
+    // with混入之前要根据依赖顺序混入
+    class Mustang with Plane, Car, Train {
+      String carName;
+      Mustang(this.carName);
+    }
+
+    final m = Mustang('野马');
+    print(m.carName);
+    m.getCarName();
+    m.getTrainName();
+    // 如果函数重名则以后注入的为主
+    m.getName();
+    ```
+
+### 类型
   - 类型
     ```dart
     abstract class Car {
