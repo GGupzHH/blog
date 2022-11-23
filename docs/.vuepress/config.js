@@ -13,7 +13,6 @@ module.exports = {
     ['link', { rel: 'icon', href: '/icon.png' }]
   ],
   // 端口号
-  port: 3000,
   extraWatchFiles: [
     '.vuepress/data/*.js',
     'pages'
@@ -27,7 +26,20 @@ module.exports = {
     '@vuepress/medium-zoom',
     '@vuepress/nprogress'
   ],
+  theme: 'reco',
   themeConfig: {
+    type: 'blog',
+    // 404
+    noFoundPageByTencent: false,
+    // 移动端优化
+    head: [
+      ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+    ],
+    // 头像
+    authorAvatar: '/avatar.jpg',
+    // 子侧边栏
+    subSidebar: 'auto',
+    
     activeHeaderLinks: false, // 默认值：true
     smoothScroll: true, // 启动页面滚动
     lastUpdated: '最后更新时间', // 最后更新时间
@@ -38,8 +50,11 @@ module.exports = {
     // editLinks: true,
     // 编辑链接label
     // editLinkText: '编辑此页',
-    nav: navBarData,
-    sidebar: sideBarFilter(sideBarConfig)
+    nav: [
+      ...navBarData,
+      { text: '往日再现！', link: '/timeline/', icon: 'reco-date' }
+    ],
+    sidebar: sideBarFilter(sideBarConfig),
   },
   configureWebpack: {
     resolve: {

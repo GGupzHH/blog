@@ -11,12 +11,13 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-nprogress": "^1.9.7",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.3.1",
     "vuepress": "^1.9.7"
   },
   "engines": {
     "node": ">=14.18.2",
     "npm": ">= 6.14.15"
+  },
+  "dependencies": {
+    "vuepress-theme-reco": "^1.6.16"
   }
 }

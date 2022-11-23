@@ -16,10 +16,10 @@ html, body
   .navbar {
     background-color $navBgColor
     border-bottom-color $navBgColor
-    box-shadow 0 0 10px $navBgColor
+    box-shadow: var(--box-shadow)
     /* 渐变色标题 */
     .site-name {
-      color #ecf0f1
+      color $accentColor
     }
     .logo {
       border-radius 50%  
@@ -32,7 +32,7 @@ html, body
       // color #ecf0f1
     }
     .nav-links a:hover, .nav-links a.router-link-active {
-      color #fff
+      color $accentColor
     }
     .nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active {
       border-bottom: 2px solid #fff;
@@ -72,9 +72,12 @@ html, body
     }
   }
   // 首页
-  .home {
+  .home-blog {
+    .hero {
+
+    }
     .hero img {
-      max-height 230px  
+      
     }
   }
   // 内容页
