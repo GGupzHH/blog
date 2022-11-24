@@ -14,6 +14,8 @@ html, body
 .theme-container
   // 头部 navbar
   .navbar {
+    font-sans-serif: fa-proxima-soft, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 0.88;
     background-color $navBgColor
     border-bottom-color $navBgColor
     box-shadow: var(--box-shadow)
@@ -40,6 +42,9 @@ html, body
     .arrow.down {
       color: #fff;
       border-top: 6px solid #fff;
+    }
+    .reco-github {
+      color: var(--text-color);
     }
     .icon.outbound {
       color: #fff;
@@ -74,7 +79,15 @@ html, body
   // 首页
   .home-blog {
     .hero {
-
+      align-items: flex-end;
+      margin: 0 auto 0;
+      h1 {
+        display: none;
+      }
+      .description {
+        font-size: 3.2rem;
+        color: #12759e;
+      }
     }
     .hero img {
       

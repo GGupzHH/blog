@@ -5,18 +5,23 @@ const { sideBarFilter } = require('./data/utils')
 module.exports = {
   base: '/blog/',
   // 页面标题
-  title: 'GGupzHH',
+  title: 'Smoothness',
   // 网页描述
-  description: '绳锯木断，水滴石穿',
+  description: 'Life can go smoothly...',
   head: [
-    // 页面icon
-    ['link', { rel: 'icon', href: '/icon.png' }]
+    ["link", { rel: "stylesheet", href: "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.css" }],
   ],
   // 端口号
   extraWatchFiles: [
     '.vuepress/data/*.js',
     'pages'
   ],
+  // 默认语言
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
   markdown: {
     // 代码块行号
     lineNumbers: true
@@ -29,12 +34,16 @@ module.exports = {
   theme: 'reco',
   themeConfig: {
     type: 'blog',
+    search: true,
+    searchMaxSuggestions: 10,
     // 404
     noFoundPageByTencent: false,
     // 移动端优化
     head: [
       ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
     ],
+    // 作者
+    author: 'Smoothness',
     // 头像
     authorAvatar: '/avatar.jpg',
     // 子侧边栏
@@ -52,7 +61,7 @@ module.exports = {
     // editLinkText: '编辑此页',
     nav: [
       ...navBarData,
-      { text: '往日再现！', link: '/timeline/', icon: 'reco-date' }
+      { text: '精彩瞬间', link: '/timeline/', icon: 'fa-solid fa-camera-retro' }
     ],
     sidebar: sideBarFilter(sideBarConfig),
   },

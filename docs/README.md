@@ -1,7 +1,7 @@
 ---
 home: true
 lang: zh-CN
-heroText: GGupzHH
+heroText: Smoothness
 actionText: GET STARTED
 actionLink: /pages/interview/
 
@@ -16,10 +16,10 @@ actionLink: /pages/interview/
 # }
 
 # 背景图片
-# bgImage: '/logo_bg.jpg'
-# bgImageStyle: {
-#   height: '350px',
-# }
+bgImage: '/h200-bg.jpg'
+bgImageStyle: {
+  height: '550px',
+}
 features:
 - title: 日常所得
   details: 日常开发和学习的积累。

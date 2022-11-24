@@ -1,4 +1,4 @@
-# &#x1F38A; GGupzHH Blog
+# &#x1F38A; Smoothness Blog
 
 ### [&#x1F449; 线上版本浏览更舒适 点击开始](https://ggupzhh.github.io/blog)
 
