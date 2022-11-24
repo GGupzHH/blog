@@ -1,10 +1,26 @@
 ---
 home: true
 lang: zh-CN
-heroText: GGupzHH
-heroImage: /logo.jpg
+heroText: Smoothness
 actionText: GET STARTED
 actionLink: /pages/interview/
+
+# 首页logo
+# heroImage: /logo.jpg
+# heroImageStyle: {
+#   height: '200px',
+#   display: block,
+#   margin: '6rem auto 1.5rem',
+#   # borderRadius: '50%',
+#   boxShadow: '0 5px 18px rgba(0,0,0,0.2)'
+# }
+
+# 背景图片
+# bgImage: '/logo_bg.jpg'
+bgImage: '/h200-bg.jpg'
+bgImageStyle: {
+  height: '550px',
+}
 features:
 - title: 日常所得
   details: 日常开发和学习的积累。

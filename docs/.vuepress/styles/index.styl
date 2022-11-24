@@ -14,12 +14,14 @@ html, body
 .theme-container
   // 头部 navbar
   .navbar {
+    font-sans-serif: fa-proxima-soft, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 0.88;
     background-color $navBgColor
     border-bottom-color $navBgColor
-    box-shadow 0 0 10px $navBgColor
+    box-shadow: var(--box-shadow)
     /* 渐变色标题 */
     .site-name {
-      color #ecf0f1
+      color $accentColor
     }
     .logo {
       border-radius 50%  
@@ -32,7 +34,7 @@ html, body
       // color #ecf0f1
     }
     .nav-links a:hover, .nav-links a.router-link-active {
-      color #fff
+      color $accentColor
     }
     .nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active {
       border-bottom: 2px solid #fff;
@@ -40,6 +42,9 @@ html, body
     .arrow.down {
       color: #fff;
       border-top: 6px solid #fff;
+    }
+    .reco-github {
+      color: var(--text-color);
     }
     .icon.outbound {
       color: #fff;
@@ -72,9 +77,21 @@ html, body
     }
   }
   // 首页
-  .home {
+  .home-blog {
+    .hero {
+      align-items: flex-end;
+      margin: 0 auto 0;
+      h1 {
+        display: none;
+      }
+      .description {
+        font-size: 3.2rem;
+        color: #12759e;
+        font-family: cursive;
+      }
+    }
     .hero img {
-      max-height 230px  
+      
     }
   }
   // 内容页
