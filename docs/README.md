@@ -16,6 +16,7 @@ actionLink: /pages/interview/
 # }
 
 # 背景图片
+# bgImage: '/logo_bg.jpg'
 bgImage: '/h200-bg.jpg'
 bgImageStyle: {
   height: '550px',
