@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <NavigationChunk 
       v-for="(knowledgeItem, knowledgeIndex) in knowledge" 
       :key="knowledgeIndex" 
@@ -19,7 +19,7 @@ export default {
   name: "Knowledge",
   data () {
     return {
-      knowledge: sideBarConfig[1].sideBarInfo,
+      knowledge: sideBarConfig[2].sideBarInfo,
       InitRouter,
       fileChildList
     }

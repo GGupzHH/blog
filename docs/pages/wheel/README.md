@@ -19,7 +19,7 @@ export default {
   name: "Wheel",
   data () {
     return {
-      wheel: sideBarConfig[2].sideBarInfo,
+      wheel: sideBarConfig[3].sideBarInfo,
       InitRouter,
       fileChildList
     }
