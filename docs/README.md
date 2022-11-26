@@ -17,9 +17,10 @@ actionLink: /pages/interview/
 
 # 背景图片
 # bgImage: '/logo_bg.jpg'
-bgImage: '/h200-bg.jpg'
+# bgImage: '/h200-bg.jpg'
+bgImage: '/images/bg/bg-01.jpg'
 bgImageStyle: {
-  height: '550px',
+  height: '100vh',
 }
 features:
 - title: 日常所得
