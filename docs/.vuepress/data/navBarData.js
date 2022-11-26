@@ -20,6 +20,11 @@ const navBarData = [
     // ]
   },
   {
+    text: 'Vue源码分析',
+    link: '/pages/analysis/',
+    icon: 'fa-duotone fa-qrcode'
+  },
+  {
     text: '知识就是力量',
     link: '/pages/knowledge/',
     icon: 'fa-sharp fa-solid fa-wand-magic-sparkles'
@@ -28,11 +33,6 @@ const navBarData = [
     text: '工具·轮子',
     link: '/pages/wheel/',
     icon: 'fa-solid fa-screwdriver-wrench'
-  },
-  {
-    text: 'Vue源码分析',
-    link: '/pages/analysis/',
-    icon: 'fa-duotone fa-qrcode'
   },
   {
     text: '进阶·博文',
