@@ -19,7 +19,7 @@ export default {
   name: "Analysis",
   data () {
     return {
-      analysis: sideBarConfig[3].sideBarInfo,
+      analysis: sideBarConfig[1].sideBarInfo,
       InitRouter,
       fileChildList
     }
