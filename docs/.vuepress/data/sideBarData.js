@@ -19,25 +19,31 @@ const sideBarConfig = [
       },
     ]
   },
+  // Vue源码分析
+  {
+    curryUri: '/pages/analysis',
+    sideBarInfo: [
+      {
+        title: 'Vue2源码剖析',
+        folder: 'vue2',
+      },
+      {
+        title: 'Vue3源码剖析',
+        folder: 'vue3',
+      }
+    ]
+  },
   // 知识就是力量
   {
     curryUri: '/pages/knowledge',
     sideBarInfo: [
-      { 
-        title: 'JavaScript-疑难杂症', 
-        folder: '01-js-疑难杂症',
-      },
-      { 
-        title: 'JavaScript-数组&对象', 
-        folder: '02-js-数组&对象',
-      },
-      { 
-        title: 'JavaScript-异步编程', 
-        folder: '03-js-异步编程',
-      },
-      { 
-        title: 'JavaScript-引擎', 
-        folder: '04-js-引擎',
+      // {
+      //   title: 'JavaScript篇',
+      //   folder: 'javascript' ,
+      // },
+      {
+        title: 'TypeScript篇',
+        folder: 'ts' ,
       },
       {
         title: 'Git篇',
@@ -59,6 +65,14 @@ const sideBarConfig = [
         title: 'Flutter篇',
         folder: 'flutter' ,
       },
+      {
+        title: 'Python篇',
+        folder: 'python',
+      },
+      {
+        title: '网络篇',
+        folder: 'network',
+      },
     ]
   },
   // 工具·轮子
@@ -68,21 +82,11 @@ const sideBarConfig = [
       { 
         title: 'Axios', 
         folder: 'axios',
-      }
-    ]
-  },
-  // Vue源码分析
-  {
-    curryUri: '/pages/analysis',
-    sideBarInfo: [
-      {
-        title: 'Vue2源码剖析',
-        folder: 'vue2',
       },
-      {
-        title: 'Vue3源码剖析',
-        folder: 'vue3',
-      }
+      { 
+        title: '通用', 
+        folder: 'general',
+      },
     ]
   },
   // 进阶·博文
@@ -90,43 +94,36 @@ const sideBarConfig = [
     curryUri: '/pages/document',
     sideBarInfo: [
       {
-        title: 'HTML相关篇',
+        title: 'HTML相关',
         folder: 'html',
       },
       {
-        title: 'Css相关篇',
+        title: 'Css相关',
         folder: 'css',
       },
       {
-        title: 'JavaScript相关篇',
+        title: 'JavaScript相关',
         folder: 'js',
       },
       {
-        title: 'TypeScript相关篇',
+        title: 'TypeScript相关',
         folder: 'ts',
       },
       {
-        title: '数据结构篇',
+        title: '数据结构相关',
         folder: 'structure',
       },
       {
-        title: '算法篇',
+        title: '算法相关',
         folder: 'algorithm',
       },
       {
-        title: 'Vue源码剖析',
-        folder: 'vue' ,
+        title: 'Git相关',
+        folder: 'git' ,
       },
+      
       {
-        title: 'Python篇',
-        folder: 'python',
-      },
-      {
-        title: '网络篇',
-        folder: 'network',
-      },
-      {
-        title: '控制台篇',
+        title: '命令行相关',
         folder: 'console' ,
       },
       {
