@@ -110,6 +110,10 @@ const sideBarConfig = [
         folder: 'ts',
       },
       {
+        title: 'Vue相关',
+        folder: 'vue',
+      },
+      {
         title: '数据结构相关',
         folder: 'structure',
       },
