@@ -10,7 +10,7 @@ tags:
 ---
 
 
-对齐定位
+本文介绍Flutter的`Align`，`Alignment`组件，该组件通过定位元素去展示。
 <!-- more -->
 
 ### Align

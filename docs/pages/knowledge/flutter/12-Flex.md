@@ -1,4 +1,17 @@
-# Flex
+---
+title: Box Model 盒模型
+date: '2022-11-22 13:50:08'
+sidebar: 'auto'
+categories:
+ - Flutter
+ - Dart
+tags:
+ - Flutter组件
+ - Flutter布局
+---
+
+本文介绍Flutter的`Flex`、`Expanded`、`Spacer`组件，详细介绍了组件的定义和用法。
+<!-- more -->
 
 ### Flex
 :::tip

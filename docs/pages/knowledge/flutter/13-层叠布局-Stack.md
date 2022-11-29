@@ -6,8 +6,12 @@ categories:
  - Flutter
  - Dart
 tags:
- - 布局
+ - Flutter布局
 ---
+
+
+本文介绍Flutter的`Stack`、`Positioned`组件，详细介绍了组件的定义和用法。
+<!-- more -->
 
 ### Stack
 :::tip
