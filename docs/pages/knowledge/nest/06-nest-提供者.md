@@ -1,4 +1,17 @@
-# Nest-Providers 提供者
+---
+title: Nest-Providers 提供者
+date: '2022-10-29 14:46:08'
+sidebar: 'auto'
+categories:
+ - Nest
+tags:
+ - Nest
+---
+
+
+本文介绍`Nest-Module-Providers`，介绍了`Providers`的多种使用方式和自定义注入方式。
+<!-- more -->
+
 
 ### 基本用法
   - 很多基本的类都能被看做`provider`，都可以通过constructor注入依赖关系。
