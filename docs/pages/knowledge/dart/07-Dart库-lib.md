@@ -1,4 +1,17 @@
-# Dart 库-lib
+---
+title: Dart 库-lib
+date: '2022-11-14 13:47:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍`Dart`的`包`的使用方法，并且介绍了`第三方包`和`类`的导入和使用。
+<!-- more -->
+
 
 ### 导入核心库
   - ```dart

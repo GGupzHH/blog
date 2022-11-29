@@ -1,4 +1,16 @@
-# Dart 类
+---
+title: Dart 类
+date: '2022-11-14 13:06:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍`Dart`的`类`的使用方法，并且介绍了类作为`类型接口`的使用和实现了类的`继承`。
+<!-- more -->
 
 ### 定义
   - ```dart

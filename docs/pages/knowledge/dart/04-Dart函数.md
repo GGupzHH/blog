@@ -1,4 +1,16 @@
-# Dart 函数
+---
+title: Dart 函数
+date: '2022-11-12 20:04:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍`Dart`的`函数`使用和函数`参数`的定义。
+<!-- more -->
 
 ### 声明
   ```dart
