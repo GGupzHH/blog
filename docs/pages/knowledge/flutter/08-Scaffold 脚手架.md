@@ -1,4 +1,18 @@
-# Scaffold 脚手架
+---
+title: Scaffold 脚手架
+date: '2022-11-21 21:47:08'
+sidebar: 'auto'
+categories:
+ - Flutter
+ - Dart
+tags:
+ - Flutter组件
+---
+
+
+本文介绍Flutter的`Scaffold`脚手架的定义和用法。
+<!-- more -->
+
 
 ### Scaffold 脚手架
 :::tip
