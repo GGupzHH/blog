@@ -1,4 +1,17 @@
-# fvm 版本控制
+---
+title: fvm 版本控制
+date: '2022-11-9 20:44:08'
+sidebar: 'auto'
+categories:
+ - Flutter
+ - Dart
+tags:
+ - fvm
+---
+
+
+本文介绍Flutter的版本控制器fvm，fvm可以切换和控制flutter和dart的版本。
+<!-- more -->
 
 
 ### 安装fvm

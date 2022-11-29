@@ -1,4 +1,18 @@
-# MaterialApp
+---
+title: MaterialApp
+date: '2022-11-21 17:04:08'
+sidebar: 'auto'
+categories:
+ - Flutter
+ - Dart
+tags:
+ - Flutter组件
+---
+
+
+本文介绍Flutter的`MaterialApp`和`CupertinoApp`组件，前者适用于`Android`，后者适用于`IOS`。
+<!-- more -->
+
 
 ### `MaterialApp`组件
 :::tip
