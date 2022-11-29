@@ -1,4 +1,20 @@
-# Nest-[RESTful风格](https://ggupzhh.github.io/blog/pages/document/api/01-RESTful%E9%A3%8E%E6%A0%BC.html)
+---
+title: Nest-RESTful
+date: '2022-10-29 14:43:08'
+sidebar: 'auto'
+categories:
+ - Nest
+tags:
+ - Nest
+ - RESTful
+---
+
+
+本文介绍`Nest-RESTful接口风格`，以及`RESTful接口风格`是什么。
+<!-- more -->
+
+
+### Nest-[RESTful风格](https://ggupzhh.github.io/blog/pages/document/api/01-RESTful%E9%A3%8E%E6%A0%BC.html)
 
 :::tip 
 `Version` 最好提取成环境变量，这样不管是接口版本控制还是swagger版本控制就都可以一起控制了。

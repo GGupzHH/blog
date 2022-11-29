@@ -1,4 +1,18 @@
-# [Nest-cli 基本用法](https://docs.nestjs.cn/9/cli?id=%e6%a6%82%e8%bf%b0)
+---
+title: Nest-Cli
+date: '2022-10-15 12:37:08'
+sidebar: 'auto'
+categories:
+ - Nest
+tags:
+ - Nest
+---
+
+
+本文介绍`Nest-Cli`，以及如何安装cli，以及cli的命令和用法。
+<!-- more -->
+
+### [Nest-cli 基本用法](https://docs.nestjs.cn/9/cli?id=%e6%a6%82%e8%bf%b0)
 
 ### 安装
   - ```sh

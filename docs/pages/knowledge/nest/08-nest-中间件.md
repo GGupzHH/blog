@@ -1,4 +1,18 @@
-# Nest-Middleware 中间件
+---
+title: Nest-Middleware 中间件
+date: '2022-10-30 14:45:08'
+sidebar: 'auto'
+categories:
+ - Nest
+tags:
+ - Nest
+ - Nest-Middleware
+ - Nest-跨域
+---
+
+本文介绍`Nest-Middleware中间件`，介绍了使用`cli`创建一个中间件和全局中间件的方法，并且配置跨域。
+<!-- more -->
+
 
 ### 依赖注入的中间件
 - 使用nest-cli创建一个logger的中间件
@@ -18,6 +32,7 @@
     }
   }
   ```
+
 - 使用
   - 指定路由拦截
     ```ts user.module.ts
