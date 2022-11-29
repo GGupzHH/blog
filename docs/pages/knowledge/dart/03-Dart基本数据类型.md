@@ -1,4 +1,17 @@
-# Dart 基本数据类型
+---
+title: Dart 基本数据类型
+date: '2022-9-21 21:24:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍`Dart`的基本数据类型。
+<!-- more -->
+
 
 ### 变量
   - 弱类型 

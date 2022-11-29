@@ -1,3 +1,17 @@
+---
+title: Dart 扩展
+date: '2022-11-15 15:45:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍`Dart`的`extension扩展`，一般用于二次扩展视图组件。
+<!-- more -->
+
 # Dart 扩展
 
 ### extension扩展

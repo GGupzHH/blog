@@ -1,4 +1,17 @@
-# Dart 异步
+---
+title: Dart 异步
+date: '2022-11-14 14:12:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍`Dart`的`异步`的处理方法，并且介绍了`语法糖`的使用方法。
+<!-- more -->
+
 
 ### 异步回调`then`
   - ```dart{7}

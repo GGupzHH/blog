@@ -1,4 +1,16 @@
-# Dart 异常
+---
+title: Dart 异常
+date: '2022-11-12 21:36:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍`Dart`的`异常处理`和异常的捕获。
+<!-- more -->
 
 ### 错误的两种类型
   - Exception 类

@@ -1,4 +1,16 @@
-# Dart
+---
+title: Dart
+date: '2022-11-10 14:42:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart基础
+---
+
+
+本文介绍从`JavaScript`角度去学习`Dart`，介绍了`Dart`的基本数据类型、函数和类、库的使用。
+<!-- more -->
 
 :::tip
 Dart是静态脚本语言

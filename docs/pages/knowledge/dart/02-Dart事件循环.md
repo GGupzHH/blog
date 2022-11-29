@@ -1,4 +1,19 @@
-# Dart 事件循环机制
+---
+title: Dart 事件循环机制
+date: '2022-9-21 21:24:08'
+sidebar: 'auto'
+categories:
+ - Dart
+tags:
+ - Dart事件循环
+---
+
+
+本文介绍`Dart`的事件循环机制。
+<!-- more -->
+
+
+### Dart 事件循环机制
 
 - Dart `单线程`
   - 其核心分为`主线程`、`微任务`、`宏任务`。
