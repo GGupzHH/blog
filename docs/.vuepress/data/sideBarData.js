@@ -114,6 +114,10 @@ const sideBarConfig = [
         folder: 'vue',
       },
       {
+        title: 'Flutter相关',
+        folder: 'flutter',
+      },
+      {
         title: '数据结构相关',
         folder: 'structure',
       },
@@ -125,7 +129,6 @@ const sideBarConfig = [
         title: 'Git相关',
         folder: 'git' ,
       },
-      
       {
         title: '命令行相关',
         folder: 'console' ,
