@@ -141,6 +141,10 @@ const sideBarConfig = [
         title: '接口相关篇',
         folder: 'api' ,
       },
+      {
+        title: '其他',
+        folder: 'other' ,
+      },
     ]
   }
 ]
