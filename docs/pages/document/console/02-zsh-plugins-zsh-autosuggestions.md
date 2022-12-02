@@ -1,4 +1,17 @@
-# zsh命令自动补全插件 `zsh-autosuggestions` Mac安装和配置
+---
+title: zsh命令自动补全插件 `zsh-autosuggestions` Mac安装和配置
+date: '2022-9-1 10:12:08'
+sidebar: 'auto'
+categories:
+ - oh-my-zsh
+tags:
+ - zsh-plugins
+---
+
+
+本文介绍`zsh-autosuggestions`的自动补全插件在Mac上的安装和配置
+<!-- more -->
+
 
 ### [仓库地址](https://github.com/zsh-users/zsh-autosuggestions)
 
