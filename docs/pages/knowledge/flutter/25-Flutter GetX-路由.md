@@ -98,74 +98,86 @@ tags:
       ```
 
 ### 导航跳转操作 命名、视图对象
-  ```dart
-  import 'package:flutter/material.dart';
-  import 'package:get/get.dart';
+  - 跳转
+    - 跳转新页面
+      ```dart
+      Get.to(NextScreen());
+      ```
 
-  class HomePage extends StatelessWidget {
-    const HomePage({Key key}) : super(key: key);
+    - 返回
+      ```dart
+      Get.back();
+      ```
+    
+  - 示例
+    ```dart
+    import 'package:flutter/material.dart';
+    import 'package:get/get.dart';
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-          appBar: AppBar(
-            title: const Text('Home'),
-          ),
-          body: ListView(
-            children: [
-              ListTile(
-                title: const Text("导航-跳转路由 /home > /my"),
-                subtitle: const Text('Get.toNamed("/my")'),
-                onTap: () => Get.toNamed("/my"),
-              ),
-              ListTile(
-                title: const Text("导航-嵌套路由 /home > /home/details"),
-                subtitle: const Text('Get.toNamed("/home/details")'),
-                onTap: () => Get.toNamed("/home/details"),
-              ),
-              const Divider(),
-              ListTile(
-                title: const Text("导航-arguments 传值+返回值"),
-                subtitle: const Text('Get.toNamed("/home/details")'),
-                onTap: () async {
-                  var result = await Get.toNamed("/home/list_details",
-                      arguments: {"id": '123'});
-                  Get.snackbar("返回值", "success -> " + result["success"].toString());
-                },
-              ),
-              const Divider(),
-              ListTile(
-                title: const Text("导航-params 传值+返回值"),
-                subtitle: const Text('Get.toNamed("/home/details?id=777")'),
-                onTap: () async {
-                  var result = await Get.toNamed("/home/list_details?id=777");
-                  Get.snackbar("返回值", "success -> " + result["success"].toString());
-                },
-              ),
-              const Divider(),
-              ListTile(
-                title: const Text("导航-参数 传值+返回值"),
-                subtitle: const Text('Get.toNamed("/home/details")'),
-                onTap: () async {
-                  var result = await Get.toNamed("/home/details/999");
-                  Get.snackbar("返回值", "success -> " + result["success"].toString());
-                },
-              ),
-              const Divider(),
-              ListTile(
-                title: const Text("404"),
-                subtitle: const Text('404页面'),
-                onTap: () async {
-                  var result = await Get.toNamed("/home123123");
-                },
-              ),
-              const Divider(),
-            ],
-          ));
+    class HomePage extends StatelessWidget {
+      const HomePage({Key key}) : super(key: key);
+
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+            appBar: AppBar(
+              title: const Text('Home'),
+            ),
+            body: ListView(
+              children: [
+                ListTile(
+                  title: const Text("导航-跳转路由 /home > /my"),
+                  subtitle: const Text('Get.toNamed("/my")'),
+                  onTap: () => Get.toNamed("/my"),
+                ),
+                ListTile(
+                  title: const Text("导航-嵌套路由 /home > /home/details"),
+                  subtitle: const Text('Get.toNamed("/home/details")'),
+                  onTap: () => Get.toNamed("/home/details"),
+                ),
+                const Divider(),
+                ListTile(
+                  title: const Text("导航-arguments 传值+返回值"),
+                  subtitle: const Text('Get.toNamed("/home/details")'),
+                  onTap: () async {
+                    var result = await Get.toNamed("/home/list_details",
+                        arguments: {"id": '123'});
+                    Get.snackbar("返回值", "success -> " + result["success"].toString());
+                  },
+                ),
+                const Divider(),
+                ListTile(
+                  title: const Text("导航-params 传值+返回值"),
+                  subtitle: const Text('Get.toNamed("/home/details?id=777")'),
+                  onTap: () async {
+                    var result = await Get.toNamed("/home/list_details?id=777");
+                    Get.snackbar("返回值", "success -> " + result["success"].toString());
+                  },
+                ),
+                const Divider(),
+                ListTile(
+                  title: const Text("导航-参数 传值+返回值"),
+                  subtitle: const Text('Get.toNamed("/home/details")'),
+                  onTap: () async {
+                    var result = await Get.toNamed("/home/details/999");
+                    Get.snackbar("返回值", "success -> " + result["success"].toString());
+                  },
+                ),
+                const Divider(),
+                ListTile(
+                  title: const Text("404"),
+                  subtitle: const Text('404页面'),
+                  onTap: () async {
+                    var result = await Get.toNamed("/home123123");
+                  },
+                ),
+                const Divider(),
+              ],
+            ));
+      }
     }
-  }
 
-  ```
+    ```
 
 ### 导航-清除上一个
   ```dart
