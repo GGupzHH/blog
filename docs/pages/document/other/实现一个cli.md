@@ -12,6 +12,25 @@ tags:
 本文带你一起实现一个`cli`工具
 <!-- more -->
 
+### [npm地址](https://www.npmjs.com/package/smoothing)
+### [仓库地址](https://github.com/GGupzHH/smoothing)
+
+### cli: Smoothing
+  - 项目介绍
+    
+  - 项目目录
+
+### 开始
+  - 项目创建
+  - codeing
+    - 开始
+    - download template
+    - 和用户交互
+    - 模板关键字替换
+    - 生成
+  - npm账号创建
+  - 发包
+
 首先
 项目生成：可以使用yo去生成一个项目模板，http://yeoman.io
 
