@@ -142,6 +142,10 @@ const sideBarConfig = [
         folder: 'api' ,
       },
       {
+        title: 'GitHub相关篇',
+        folder: 'github' ,
+      },
+      {
         title: '其他',
         folder: 'other' ,
       },
