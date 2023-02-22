@@ -16,7 +16,16 @@ flutter配置APP图标和名字。
 
 ### 名字
   - 修改APP名字的文件在`/ios/Runner/Info.plist`
-  - 找到`<key>CFBundleName</key>`下一行就是app名称的设置位置
+  - APP名称
+    - ios/Runner/Info.plist
+    - `CFBundleName`这个字段的下一个标签是设置APP名字的，直接修改即可
+      ```
+      <string>6.0</string>
+      <key>CFBundleName</key>
+      <string>APP名称</string>
+      <key>CFBundlePackageType</key>
+      <string>APPL</string>
+      ```
 
 ### 图标
   - 修改app图标的文件目录在`ios/Runner/Assets.xcassets/AppIcon.appiconset`下
@@ -28,7 +37,10 @@ flutter配置APP图标和名字。
 
 ### 名字
   - 修改APP名字的文件在`android/app/src/main/AndroidManifest.xml`
-  - 找到`android:label`修改后面字段即可
+  - `android:label`这个字段是设置APP名字的，直接修改即可
+      ```
+      android:label="APP名称"
+      ```
 
 
 ### 图标
