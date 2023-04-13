@@ -3,7 +3,7 @@ title: 一起实现一个CLI工具
 date: '2022-12-26 22:48:04'
 sidebar: 'auto'
 categories:
- - Come Together!
+ - Other
 tags:
  - cli
 ---
@@ -260,6 +260,9 @@ tags:
       npm unpublish [packagename]--force
       ```
 
+### 使用
+  - 安装
+  - 使用
 ### 注意
   - 依赖都安装到`dependencies`，不能安装到`devDependencies`，不然发包之后devDependencies中的依赖是不会自动安装的。
   - 然后脚手架的模块导入规范必须是commonjs，而且都是js直接编写，期间由于部分包升级换代不支持commonjs规范，就得从原来的版本中去找。
