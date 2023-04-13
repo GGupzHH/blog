@@ -28,22 +28,6 @@ tags:
       ```sh
         npm install -g yo smoothing-generator
       ```
-    - 输出，这里选择的是TypeScript
-      ```sh
-      yo code
-
-      # ? What type of extension do you want to create? New Extension (TypeScript)
-      # ? What's the name of your extension? copyFileOrDirName
-      ### Press <Enter> to choose default for all options below ###
-
-      # ? What's the identifier of your extension? helloworld
-      # ? What's the description of your extension? LEAVE BLANK
-      # ? Enable stricter TypeScript checking in 'tsconfig.json'? Yes
-      # ? Setup linting using 'tslint'? Yes
-      # ? Initialize a git repository? Yes
-      # ? Which package manager to use? npm
-
-      ```
 
   - 配置
     - 这里主要是`package.json`的配置
@@ -497,3 +481,5 @@ tags:
     - 找到选项`Smo: Create Module Template`
     - 输入模块名称即可
 
+### 想法
+  - 搭配`smoothing-cli`可以加入更多不同模板细粒度的文件夹，提高效率

@@ -17,18 +17,36 @@ tags:
 
 ### cli: Smoothing
   - 项目介绍
-    基于vue模板项目开发的脚手架工具，目前只支持vue模板
+    - 基于vue模板项目开发的脚手架工具，目前只支持vue模板。
+  
+  - cli是什么
+    - 为减少初始化项目的重复工作，运行一些预设好的命令去构建前端项目，并且可以加入一些自定义配置。
 
-  - 项目目录
 
 ### 开始
   - 项目创建
-    - [yeoman](http://yeoman.io) 选择node模板
-    ```sh
-      yo
-    ```
+    - 安装
+      ```sh
+        npm install -g yo
+      ```
+
+    - [yeoman](http://yeoman.io): 是一个前端脚手架工具，可以帮助开发者快速创建和搭建 Web 应用程序的基础结构和模板。它提供了一些常用的项目模板、自动化任务和代码生成器等功能，使得开发者可以更加高效地完成项目开发，同时减少重复性工作和人为出错的风险。 `Yeoman` 基于 Node.js 平台进行开发，并且允许用户使用自己的生成器或从社区中选择合适的生成器来创建和管理项目。通过命令行界面，开发者可以轻松地创建新项目、添加或删除依赖、打包和发布应用等操作，而无需手动维护和配置复杂的项目结构。 总之，`Yeoman` 简化了前端项目的开发流程，提高了开发效率和质量，被广泛应用于各种 Web 开发场景中。
+      ```sh
+        # 选择node模板
+        yo
+      ```
 
   - codeing
+    - 配置脚本启动命令
+      ```json
+        {
+          "bin": {
+            "smoothing": "./bin/smoothing.js",
+            "smo": "./bin/smoothing.js"
+          },
+        }
+      ```
+
     - 开始 `smoothing.js`
       ```js
         /**
@@ -127,33 +145,6 @@ tags:
               type: 'string',
               message: '仓库地址:'
             },
-          },
-          filters: {
-            '.babelrc': 'withTypescript',
-            'tsconfig.json': 'withTypescript',
-            'server.js': 'server',
-            'store.js': "store",
-            'pages/_app.js': 'store',
-            'next.config.js': 'configs.length > 0',
-            'lib/with-redux-store.js': 'store'
-          },
-          complete: function(data, { chalk }) {
-            /**
-            * 用于判断是否执行自动安装依赖
-            */
-            const green = chalk.green // 取绿色
-            const cwd = path.join(process.cwd(), data.destDirName)
-            if (data.autoInstall) {
-              installDependencies(cwd, 'npm', green) // 这里使用npm安装
-                .then(() => {
-                  console.log('依赖安装完成')
-                })
-                .catch(e => {
-                  console.log(chalk.red('Error:'), e)
-                })
-            } else {
-              // printMessage(data, chalk)
-            }
           }
         }
       ```
@@ -206,6 +197,34 @@ tags:
       }
       ```
 
+    - 处理静态文件
+      - Metalsmith 是一个基于 Node.js 的静态文件处理器
+        ```js
+          module.exports = function generate(name, tem, done) {
+            const opts = meta
+            const metalsmith = Metalsmith(tem)
+            const data = Object.assign(metalsmith.metadata(), {
+              destDirName: name,
+              configs: []
+            })
+
+            metalsmith
+              .use(askQuestions(opts.prompts))
+              .use(renderTemplateFiles())
+
+            metalsmith
+              // 生成目标文件时候，是否清除原来的文件，默认true
+              .clean(false)
+              // 模板路径
+              .source('.')
+              // 目标路径
+              .destination(path.join(process.cwd(), name))
+              .build((err, files) => {
+                done(err)
+              })
+          }
+        ```
+
     - 模板关键字替换
       ```js
       function renderTemplateFiles() {
@@ -225,6 +244,13 @@ tags:
         }
       }
       ```
+
+  - 整体实现思路
+    1. 使用`yeoman`生成模板，设置脚本入口文件；
+    2. 接收用户输入的模板名称，判断当前目录是否有同名文件；
+    3. 下载远程仓库模板文件；
+    4. 收集用户输入信息，自定义模板信息；
+    5. 替换下载好的模板内容生成文件
   
   - 发包
     - 账号注册
@@ -262,8 +288,21 @@ tags:
 
 ### 使用
   - 安装
+    ```sh
+    $ npm install -g smoothing
+    ```
+
   - 使用
+    ```sh
+    $ smoothing templateName
+
+    $ smo templateName
+    ```
 ### 注意
   - 依赖都安装到`dependencies`，不能安装到`devDependencies`，不然发包之后devDependencies中的依赖是不会自动安装的。
   - 然后脚手架的模块导入规范必须是commonjs，而且都是js直接编写，期间由于部分包升级换代不支持commonjs规范，就得从原来的版本中去找。
   - npm发包：403-重名/登录地址不对
+
+### 一些想法
+  - 客制化更多模板，模板更细粒度控制
+  - 模板初始化之后安装依赖
