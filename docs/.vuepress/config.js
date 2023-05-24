@@ -55,6 +55,16 @@ module.exports = {
     sidebar: 'auto', // 所有页面自动生成侧边栏
     repo: 'https://github.com/GGupzHH/blog', // 仓库地址
     repoLabel: 'GitHub',  // 仓库链接label
+    // 评论功能
+    "vssueConfig": {
+      "platform": 'github',  // v4必须登录但没有次数限制。v3不用登录，但是有调用次数限制。
+      "owner": 'GGupzHH',
+      "repo": 'blog',
+      // "clientId": 'a0e3b9c6227d9a4c068a', // 对应本地地址：http://localhost:8080/leezozz-blog/
+      // "clientSecret": 'e0eaac92cbee613c208012e6c6a3895791569596',  
+      "clientId": 'f1a9ac25d2838fcdca10', // 对应线上地址：https://leezozz.github.io/leezozz-blog/
+      "clientSecret": '842f4ae12a14103dbb91547e40c42c04973b2c32', 
+    },
     // 编辑链接
     // editLinks: true,
     // 编辑链接label
