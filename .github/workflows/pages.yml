@@ -30,8 +30,8 @@ jobs:
           user_name='GGupzHH'
           user_email=`git log -1 --pretty=format:'%ae'`
           deploy_branch=blog
-          env.CLIENT_ID=${secrets.CLIENT_ID}
-          env.CLIENT_SECRET_ID=${secrets.CLIENT_SECRET_ID}
+          env.CLIENT_ID='f1a9ac25d2838fcdca10'
+          env.CLIENT_SECRET_ID='842f4ae12a14103dbb91547e40c42c04973b2c32'
 
           echo ${remote_addr}
           echo ${commit_info}
