@@ -92,5 +92,6 @@ tags:
     :::tip
     token 只会在生成的时候显示一次，如需要再次显示，则可以点击，但使用此令牌的任何脚本或应用程序都需要更新！不过记得权限过期以及勾选上 workflow。
     :::
+    - [Personal access tokens 生成](https://ggupzhh.github.io/blog/pages/document/github/03-github-token生成.html)
     - push的时候使用
     ![流程](/blog/images/document-github/841675839610_.pic.jpg)
