@@ -23,6 +23,9 @@ jobs:
           node-version: ${{ matrix.node-version }} # 版本
 
       - name: Build-and-deploy # 步骤3
+        env:
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET_ID: ${{ secrets.CLIENT_SECRET_ID }}
         run: |
           echo '获取仓库基本信息'
           remote_addr=`git remote get-url --push origin`
@@ -30,8 +33,6 @@ jobs:
           user_name='GGupzHH'
           user_email=`git log -1 --pretty=format:'%ae'`
           deploy_branch=blog
-          env.CLIENT_ID='f1a9ac25d2838fcdca10'
-          env.CLIENT_SECRET_ID='842f4ae12a14103dbb91547e40c42c04973b2c32'
 
           echo ${remote_addr}
           echo ${commit_info}
