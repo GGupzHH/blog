@@ -59,9 +59,7 @@ module.exports = {
     "vssueConfig": {
       "platform": 'github',  // v4必须登录但没有次数限制。v3不用登录，但是有调用次数限制。
       "owner": 'GGupzHH',
-      "repo": 'blog',
-      // "clientId": 'a0e3b9c6227d9a4c068a', // 对应本地地址：http://localhost:8080/leezozz-blog/
-      // "clientSecret": 'e0eaac92cbee613c208012e6c6a3895791569596',  
+      "repo": 'blog', 
       "clientId": process.env.CLIENT_ID, // 对应线上地址：https://leezozz.github.io/leezozz-blog/
       "clientSecret": process.env.CLIENT_SECRET_ID, 
     },
