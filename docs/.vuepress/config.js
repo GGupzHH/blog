@@ -62,8 +62,8 @@ module.exports = {
       "repo": 'blog',
       // "clientId": 'a0e3b9c6227d9a4c068a', // 对应本地地址：http://localhost:8080/leezozz-blog/
       // "clientSecret": 'e0eaac92cbee613c208012e6c6a3895791569596',  
-      "clientId": 'f1a9ac25d2838fcdca10', // 对应线上地址：https://leezozz.github.io/leezozz-blog/
-      "clientSecret": '842f4ae12a14103dbb91547e40c42c04973b2c32', 
+      "clientId": process.env.CLIENT_ID, // 对应线上地址：https://leezozz.github.io/leezozz-blog/
+      "clientSecret": process.env.CLIENT_SECRET_ID, 
     },
     // 编辑链接
     // editLinks: true,
