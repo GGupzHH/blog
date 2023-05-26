@@ -50,6 +50,9 @@ tags:
               node-version: ${{ matrix.node-version }} # 版本
 
           - name: Build-and-deploy # 步骤3
+            env:
+              CLIENT_ID: ${{ secrets.CLIENT_ID }}
+              CLIENT_SECRET_ID: ${{ secrets.CLIENT_SECRET_ID }}
             run: |
               echo '获取仓库基本信息'
               remote_addr=`git remote get-url --push origin`
@@ -58,13 +61,18 @@ tags:
               user_email=`git log -1 --pretty=format:'%ae'`
               deploy_branch=blog
 
+              echo ${remote_addr}
+              echo ${commit_info}
+              echo ${deploy_branch}
+
               yarn
               yarn build
-              echo '安装依赖和构建打包'
-
               cd docs/.vuepress/dist
               git config --global init.defaultBranch $deploy_branch
               git init
+              echo ${user_name}
+              echo ${user_email}
+
               git config user.name ${user_name}
               git config user.email ${user_email}
               echo '设置git用户信息完成'
@@ -76,11 +84,14 @@ tags:
               echo ${remote_addr}
               git remote add origin ${remote_addr}
               git push origin HEAD:$deploy_branch --force # 推送到github $deploy_branch分支
+
+
     ```
 
   - 上面这个 workflow 文件的要点如下
     - 整个流程在`main`分支发生`pull_request`事件时触发。
     - 只有一个job，运行在虚拟机环境ubuntu-latest。
+    - 设置环境变量`CLIENT_ID`和`CLIENT_SECRET_ID`搭配[Vssue](https://github.com/meteorlxy/vssue)登录`GitHub`账号进行评论。
     - 首先获取当前仓库基本信息并且设置git用户名和邮箱。
     - 安装依赖和构建打包。
     - 进入到打包的目录，初始化git，设置分支和用户信息。
@@ -92,6 +103,6 @@ tags:
     :::tip
     token 只会在生成的时候显示一次，如需要再次显示，则可以点击，但使用此令牌的任何脚本或应用程序都需要更新！不过记得权限过期以及勾选上 workflow。
     :::
-    - [Personal access tokens 生成](https://ggupzhh.github.io/blog/pages/document/github/03-github-token生成.html)
-    - push的时候使用
-    ![流程](/blog/images/document-github/841675839610_.pic.jpg)
+    - [Personal access tokens 生成、配置和使用](https://ggupzhh.github.io/blog/pages/document/github/03-github-token.html)
+    - [Actions secrets and variables 生成、配置和使用](https://ggupzhh.github.io/blog/pages/document/github/03-github-actions-secrets.html)
+    ![示例](/blog/images/document-github/841675839610_.pic.jpg)
