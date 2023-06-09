@@ -1,6 +1,6 @@
 ---
 title: TypeScript-模式匹配
-date: '2023年06月07日15:38:31'
+date: '2023-06-07 15:38:31'
 sidebar: 'auto'
 categories:
 - TypeScript
