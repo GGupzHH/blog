@@ -30,6 +30,10 @@ const sideBarConfig = [
       {
         title: 'Vue3源码剖析',
         folder: 'vue3',
+      },
+      {
+        title: '深入浅出-Vite',
+        folder: '深入浅出-Vite',
       }
     ]
   },

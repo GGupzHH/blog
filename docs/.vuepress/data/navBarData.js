@@ -20,7 +20,7 @@ const navBarData = [
     // ]
   },
   {
-    text: 'Vue源码分析',
+    text: '源码解析',
     link: '/pages/analysis/',
     icon: 'fa-duotone fa-qrcode'
   },
